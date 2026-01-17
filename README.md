@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HMO Fast-Pass Authorization System
 
-## Getting Started
+> **Live Demo:** [https://hmo-fast-pass.vercel.app](https://hmo-fast-pass.vercel.app)
 
-First, run the development server:
+## The Problem
+In Nigeria, the **National Health Insurance Authority (NHIA)** has mandated that all HMOs must issue authorization codes to hospitals within **1 hour** or face sanctions. Currently, most HMOs rely on manual phone calls and WhatsApp messages, leading to:
+- Delays of 3-6 hours for sick patients.
+- Frustrated hospital staff.
+- Risk of heavy government fines.
 
-```bash
+## The Solution
+**HMO Fast-Pass** is an automated gatekeeper system that reduces authorization time from **hours to 60 seconds**.
+
+It allows hospitals to submit patient details via a secure portal, instantly validates eligibility against the HMO's database, and generates a unique, trackable authorization code.
+
+## Key Features (Prototype)
+- **Instant Eligibility Check:** Validates Patient ID against active enrollee lists.
+- **Smart Validation:** Checks if the requested treatment is covered by the patient's specific plan.
+- **Code Generation:** Issues unique, fraud-proof authorization codes (e.g., `AUTH-847291`).
+- **Mobile Optimized:** Designed for hospital staff using mobile phones in low-bandwidth environments.
+
+## Tech Stack
+- **Frontend:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Deployment:** Vercel
+
+## Screenshots
+*()*
+
+##  How to Run Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/0xAnthonyRx/hmo-fast-pass.git](https://github.com/0xAnthonyRx/hmo-fast-pass.git)
+   cd hmo-fast-pass
+
+
+   Install dependencies
+
+Bash
+
+npm install
+Run the development server
+
+Bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open your browser Navigate to http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧪 Testing Data
+To test the prototype logic, use these IDs:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+12345 - Active Patient (Gold Plan) -> Success
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+11111 - Suspended Patient -> Fails
 
-## Learn More
+99999 - Non-existent ID -> Fails
 
-To learn more about Next.js, take a look at the following resources:
+Future Roadmap (Pilot Phase)
+[ ] Integration with Termii API for SMS delivery.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[ ] PostgreSQL Database connection for real-time enrollee management.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[ ] Admin Dashboard for HMO Operations Managers.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by Anthony Madu Solving Healthcare Logistics in Nigeria.
