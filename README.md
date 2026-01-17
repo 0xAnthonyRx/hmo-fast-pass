@@ -38,18 +38,15 @@ It allows hospitals to submit patient details via a secure portal, instantly val
 
 
    Install dependencies
+   npm install
+   Run the development server
+   npm run dev
+   Open your browser Navigate to http://localhost:3000
 
-Bash
 
-npm install
-Run the development server
 
-Bash
+## Testing Data
 
-npm run dev
-Open your browser Navigate to http://localhost:3000
-
-🧪 Testing Data
 To test the prototype logic, use these IDs:
 
 12345 - Active Patient (Gold Plan) -> Success
@@ -58,11 +55,11 @@ To test the prototype logic, use these IDs:
 
 99999 - Non-existent ID -> Fails
 
-Future Roadmap (Pilot Phase)
+## Future Roadmap (Pilot Phase)
 [ ] Integration with Termii API for SMS delivery.
 
 [ ] PostgreSQL Database connection for real-time enrollee management.
 
 [ ] Admin Dashboard for HMO Operations Managers.
 
-Built by Anthony Madu Solving Healthcare Logistics in Nigeria.
+# Built by Anthony Madu, Solving Healthcare Logistics in Nigeria.
